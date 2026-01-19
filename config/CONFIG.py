@@ -12,8 +12,8 @@ DATA_CONFIG = {
     "test_data_path" : "data/processed/test_data.csv",          # normal + anomali
     "window_size" : 10,
     "stride" : 1,
-    "train_normal_rato" : 0.8,
-    "test_size" : 0.2,
+    "train_normal_ratio" : 0.6,
+    "test_size" : 0.4,
     "random_seed" : 42
 }
 
@@ -55,3 +55,19 @@ PATHS = {
         "processed" : "data/processed/"
     }
 }
+
+# LOGGING FUNCTION FOR CONFIG
+def print_config():
+    """Print semua config yang digunakan"""
+    
+    print("\nDATA CONFIG:")
+    for key, value in DATA_CONFIG.items():
+        print(f" {key} : {value}")
+
+    print("\nMODEL CONFIG:")
+    for key, value in MODEL_CONFIG.items():
+        print(f" {key} : {value}")
+
+    print("\nTRAINING CONFIG:")
+    for key, value in TRAINING_CONFIG.items():
+        print(f" {key} : {value}")
