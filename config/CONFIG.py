@@ -33,7 +33,7 @@ TRAINING_CONFIG = {
     "batch_size" : 32,
     "learning_rate" : 0.001,
     "weight_decay" : 1e-5,
-    "devcie" : torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+    "device" : torch.device("cuda" if torch.cuda.is_available() else "cpu"),
     "save_every" : 10
 }
 
