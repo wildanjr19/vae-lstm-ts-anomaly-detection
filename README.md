@@ -28,9 +28,25 @@ Dataset yang digunakan dalam proyek ini bersumber dari [Numenta Anomaly Benchmar
 |01|1e-3|32|64|50|10|1|1.0|0.978874|0.978797|0.000077|
 ### Test
 
-## Clone
+## Usage
+### Clone
 ``` bash
 git clone https://github.com/wildanjr19/vae-lstm-ts-anomaly-detection.git
 ```
+### Running
+Pastikan data (raw) ada di `data/`
+``` bash
+python src/train.py --dataset data/{data.csv} --epochs 50 --batch_size 32
+```
+
+## Future Work
+- [ ] Bisa handle unuspervised.
+- [ ] LSTM + Attention.
 
 ## References
+- [Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model](https://ieeexplore.ieee.org/document/9053558)
+- [Anomaly Detection Using LSTM-Based Variational Autoencoder in Unsupervised Data in Power GridDibyajy](https://www.ece.nus.edu.sg/stfpage/bsikdar/papers/sj_dg_23.pdf)
+- [TS VAE-LSTM](https://github.com/thatgeeman/ts_vae-lstm)
+
+## My Notes
+- `contaminaton` mencegah overfitting karena pada kasus real data pelatihan bisa saja mengandung anomali atau pengumpulan data yang tidak sepenuhnya sempurna.
