@@ -7,10 +7,10 @@ Deteksi anomali pada data deret waktu (time-series) menggunakan arsitektur LSTM 
 
 ## Loss
 Kombinasi antara Mean Squared Eror (MSE) untuk evaluasi rekonstruksi dan Kullback-Leibler (KL) Divergence untuk regularisasi.
-- **MSE** : Evaluasi antara data real dan hasil rekonstruksi
-$$\text{MSE} = \frac{1}{N \times D} \sum_{i=1}^{N} \sum_{j=1}^{D} (x_{ij} - \hat{x}_{ij})^2$$
-- **KL Divergence** : Mengukur perbedaan antara dua distribusi
-$$D_{KL}(q(z|x) | p(z)) = -\frac{1}{2} \sum (1 + \log \sigma^2 - \mu^2 - \sigma^2)$$
+- **MSE** : Evaluasi antara data real dan hasil rekonstruksi  
+  $$\text{MSE} = \frac{1}{N \times D} \sum_{i=1}^{N} \sum_{j=1}^{D} (x_{ij} - \hat{x}_{ij})^2$$
+- **KL Divergence** : Mengukur perbedaan antara dua distribusi  
+  $$D_{KL}(q(z|x) | p(z)) = -\frac{1}{2} \sum (1 + \log \sigma^2 - \mu^2 - \sigma^2)$$
 
 ## Architecture
 Arsitektur model:
